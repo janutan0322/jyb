@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온품 (ON-POUM) - 사이버 폭력 예방 & 안심 포용 플랫폼</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Pretendard', sans-serif; }
+        .glass {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .neon-glow {
+            box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="bg-slate-900/80 border-b border-slate-800 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-lg shadow-lg shadow-indigo-500/30">
+                    🛡️
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-300 bg-clip-text text-transparent">
+                        온품 <span class="text-xs bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded-full ml-1">사이버 폭력 ZERO</span>
+                    </h1>
+                </div>
+            </div>
+            <p class="text-xs text-slate-400 hidden sm:block">보이지 않는 아픔까지 보듬는 안전하고 포용적인 학교</p>
+        </div>
+    </header>
+
+    <!-- Main Navigation Tabs -->
+    <nav class="bg-slate-900/40 border-b border-slate-800/80">
+        <div class="max-w-5xl mx-auto flex justify-around sm:justify-start sm:space-x-8 px-4">
+            <button onclick="switchTab('issues')" id="btn-issues" class="py-3.5 px-3 font-semibold text-sm border-b-2 border-indigo-500 text-indigo-400 transition flex items-center gap-1.5">
+                <span>🔍</span> 실태 및 문제 인식
+            </button>
+            <button onclick="switchTab('support')" id="btn-support" class="py-3.5 px-3 font-semibold text-sm border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition flex items-center gap-1.5">
+                <span>🚨</span> 긴급 보호 & 익명 제보
+            </button>
+            <button onclick="switchTab('community')" id="btn-community" class="py-3.5 px-3 font-semibold text-sm border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition flex items-center gap-1.5">
+                <span>🕊️</span> 연대와 포용의 공간
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content Area -->
+    <main class="flex-grow max-w-5xl w-full mx-auto p-4 sm:p-6 space-y-6">
+        
+        <!-- Tab 1: Issues & Awareness -->
+        <section id="tab-issues" class="space-y-6">
+            <!-- Hero Banner -->
+            <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-900/60 via-purple-900/40 to-slate-900 border border-indigo-500/20 p-6 sm:p-8 neon-glow">
+                <div class="relative z-10 max-w-2xl space-y-3">
+                    <span class="inline-block text-xs font-semibold px-3 py-1 bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 rounded-full">학교 현장 심층 분석</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">스마트폰 뒤에 숨은 24시간의 침묵,<br><span class="bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">사이버 폭력의 현실</span>을 직시합니다</h2>
+                    <p class="text-sm text-slate-300 leading-relaxed">단체 채팅방 폭력, 은밀한 따돌림, 익명 루머 유포까지. 신체적 폭력보다 더 정교하고 지능화된 사이버 폭력으로부터 우리 학생들을 지킵니다.</p>
+                </div>
+            </div>
+
+            <!-- Context Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- Card 1 -->
+                <div class="glass-card p-5 rounded-2xl space-y-3 border-t-2 border-t-indigo-500/50 hover:border-t-indigo-400 transition">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-xl text-indigo-400">📱</div>
+                    <h3 class="font-bold text-slate-100 text-base">1. 문제 상황</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        카카오톡 단체 채팅방, 익명 게시판, SNS를 통한 지속적 비하와 거짓 루머 유포. 강제 초대 후 언어 폭력을 행사하거나, 특정 학생만 제외한 그룹방을 만들어 조롱하는 등 수법이 지능화되고 있습니다.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-5 rounded-2xl space-y-3 border-t-2 border-t-pink-500/50 hover:border-t-pink-400 transition">
+                    <div class="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center text-xl text-pink-400">💔</div>
+                    <h3 class="font-bold text-slate-100 text-base">2. 피해자 & 방관자의 고통</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        피해 학생은 24시간 끊이지 않는 시공간 초월 공격으로 극심한 불안과 등교 두려움을 느낍니다. 목격 학생 역시 다음 타깃이 될지 모른다는 공포에 방관하며 깊은 죄책감을 겪습니다.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-5 rounded-2xl space-y-3 border-t-2 border-t-emerald-500/50 hover:border-t-emerald-400 transition">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-xl text-emerald-400">🌱</div>
+                    <h3 class="font-bold text-slate-100 text-base">3. 해결 후 변화</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        언제 어디서나 안심하고 소통할 수 있는 안전한 환경이 조성됩니다. 익명성 뒤의 인권 침해가 바로잡히고 서로를 보듬어주는 따뜻하고 포용적인 학교 공동체가 확립됩니다.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Search & Interactive Guide -->
+            <div class="glass p-5 rounded-2xl space-y-4">
+                <h3 class="font-bold text-slate-200 text-sm flex items-center gap-2">
+                    <span>💡</span> 사이버 폭력 유형 및 대처 가이드 검색
+                </h3>
+                <div class="flex gap-2">
+                    <input type="text" id="searchInput" placeholder="키워드 검색 (예: 카톡 억지초대, 익명 루머, 방관자)" class="flex-grow px-4 py-2.5 bg-slate-900/90 border border-slate-700 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-100 placeholder-slate-500">
+                    <button onclick="searchCases()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition shadow-lg shadow-indigo-600/30">검색</button>
+                </div>
+                <div id="caseList" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Dynamic Cases -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 2: Protection & Anonymous Reporting -->
+        <section id="tab-support" class="space-y-6 hidden">
+            <div class="bg-gradient-to-r from-purple-900/40 via-indigo-900/30 to-slate-900 border border-purple-500/20 rounded-3xl p-5 sm:p-6">
+                <h2 class="font-bold text-purple-200 text-lg mb-1">피해자 맞춤 보호 & 100% 안심 익명 제보</h2>
+                <p class="text-xs sm:text-sm text-purple-300">보복의 두려움 없이 마음을 털어놓을 수 있는 철저한 비밀 보장 시스템을 제공합니다.</p>
+            </div>
+
+            <!-- Welfare/Support Filter -->
+            <div class="glass p-5 rounded-2xl space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold text-slate-300 mb-2">필요한 지원 및 보호 서비스 선택</label>
+                    <select id="supportCategory" class="w-full px-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-sm text-slate-200 focus:ring-2 focus:ring-purple-500 focus:outline-none">
+                        <option value="all">전체 서비스 보기</option>
+                        <option value="psychological">피해 학생 1:1 심리상담 및 정서 지원</option>
+                        <option value="reporting">방관자/목격자 100% 익명 보호 제보</option>
+                        <option value="cyber">디지털 잊힐 권리 & 기록 삭제 지원</option>
+                    </select>
+                </div>
+                <button onclick="filterSupport()" class="w-full bg-purple-600 hover:bg-purple-500 text-white py-3 rounded-xl font-medium text-sm transition shadow-lg shadow-purple-600/30">맞춤 지원 솔루션 조회</button>
+            </div>
+
+            <!-- Support Services List -->
+            <div id="supportList" class="space-y-3">
+                <!-- Dynamic Support Items -->
+            </div>
+        </section>
+
+        <!-- Tab 3: Inclusive Community -->
+        <section id="tab-support-community" class="space-y-6 hidden">
+            <div class="bg-gradient-to-r from-emerald-900/40 via-teal-900/30 to-slate-900 border border-emerald-500/20 rounded-3xl p-5 sm:p-6">
+                <h2 class="font-bold text-emerald-200 text-lg mb-1">따뜻한 포용과 연대의 한마디</h2>
+                <p class="text-xs sm:text-sm text-emerald-300">누군가를 배척하기보다 따뜻하게 보듬는 학교 문화를 만들어갑니다. 응원의 메시지를 남겨주세요.</p>
+            </div>
+
+            <div class="glass p-5 rounded-2xl space-y-3">
+                <input type="text" id="writerName" placeholder="작성자 이름 또는 익명 (예: 2학년 친구, 따뜻한 마음)" class="w-full px-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-sm text-slate-100 placeholder-slate-500 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                <textarea id="messageContent" rows="3" placeholder="피해 친구에게 전하는 응원이나 포용적인 학급 문화를 만들기 위한 다짐을 적어주세요." class="w-full px-4 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-sm text-slate-100 placeholder-slate-500 focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea>
+                <button onclick="addMessage()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-sm font-medium transition shadow-lg shadow-emerald-600/30">응원 메시지 등록하기</button>
+            </div>
+
+            <!-- Message List -->
+            <div id="messageList" class="space-y-3">
+                <!-- Dynamic Messages -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Custom Modal -->
+    <div id="customModal" class="fixed inset-0 bg-black/70 backdrop-blur-md hidden flex items-center justify-center p-4 z-50">
+        <div class="glass rounded-2xl p-6 max-w-sm w-full text-center space-y-4 border border-slate-700 shadow-2xl">
+            <div id="modalIcon" class="text-4xl">✨</div>
+            <h3 id="modalTitle" class="font-bold text-lg text-slate-100">안내</h3>
+            <p id="modalDesc" class="text-sm text-slate-300">내용입니다.</p>
+            <button onclick="closeModal()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white py-2.5 rounded-xl text-sm font-medium transition">확인</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 text-center py-5 text-xs text-slate-500 mt-12">
+        <p>사이버 폭력 예방 & 올바른 인권 존중 공동체 만들기 프로젝트 | 온품 (ON-POUM)</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Mock Data: Cyberbullying Cases & Guides
+        const cases = [
+            { id: 1, name: "카카오톡 억지 초대 & 언어 폭력", category: "messaging", address: "단체 채팅방 / 메신저", tag: "방 나가도 재초대 / 지속적 비하", menu: "증거 수집(캡처) 후 전문 상담원 연결" },
+            { id: 2, name: "피해자 배제 저격방 생성", category: "messaging", address: "비밀 단체 채팅방", tag: "피해 학생만 빼고 조롱 및 허위사실 유포", menu: "100% 익명 제보 창구 이용 대처" },
+            { id: 3, name: "익명 SNS 허위 루머 유포", category: "sns", address: "익명 게시판 / SNS", tag: "정체 숨긴 인격 모독 / 루머 찌라시", menu: "디지털 잊힐 권리 게시글 삭제 지원" },
+            { id: 4, name: "목격 학생 방관자 공포 극복", category: "witness", address: "학급 및 온라인 공동체", tag: "보복 두려움 완화 / 익명 수호자 제도", menu: "비밀 보장 헬프라인 연계" }
+        ];
+
+        // Mock Data: Support Services
+        const supports = [
+            { title: "24시간 1:1 비밀 마음 케어 심리상담", category: "psychological", desc: "시공간 제약 없이 24시간 극심한 불안감과 스트레스를 겪는 피해 학생을 위해 전문 심리상담사가 1:1 비밀 케어를 진행합니다.", target: "사이버 폭력 피해 학생 및 정서적 위기 학생" },
+            { title: "방관 방지! 100% 비밀 보장 익명 제보 시스템", category: "reporting", desc: "다음 타깃이 될 것이 두려워 망설였던 목격 학생들을 위해 신원 추적이 불가능한 100% 익명 제보 채널을 운영합니다.", target: "사이버 폭력을 목격하였으나 보복이 두려운 학생" },
+            { title: "디지털 잊힐 권리 & 악성 게시물 삭제 지원", category: "cyber", desc: "인터넷과 SNS상에 유포된 허위 사실, 개인정보, 비하 게시물을 신속히 차단하고 삭제 처리를 지원합니다.", target: "온라인상 유포 피해를 입은 학생" }
+        ];
+
+        // Mock Data: Community Messages
+        let messages = [
+            { writer: "따뜻한 이웃 친구", content: "익명이라는 이름 뒤에 숨어 남에게 상처 주는 행물은 이제 그만! 우리 반 모두 안심하고 웃을 수 있는 교실을 만들어가요." },
+            { writer: "수호자 학생", content: "방관하는 것도 마음이 아팠어요. 이제 용기 내어 피해 친구 편에 서겠습니다. 넌 혼자가 아니야!" }
+        ];
+
+        // Tab Switching Logic
+        function switchTab(tabName) {
+            document.getElementById('tab-issues').classList.add('hidden');
+            document.getElementById('tab-support').classList.add('hidden');
+            document.getElementById('tab-support-community').classList.add('hidden');
+
+            document.getElementById('btn-issues').className = "py-3.5 px-3 font-semibold text-sm border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition flex items-center gap-1.5";
+            document.getElementById('btn-support').className = "py-3.5 px-3 font-semibold text-sm border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition flex items-center gap-1.5";
+            document.getElementById('btn-community').className = "py-3.5 px-3 font-semibold text-sm border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition flex items-center gap-1.5";
+
+            if(tabName === 'issues') {
+                document.getElementById('tab-issues').classList.remove('hidden');
+                document.getElementById('btn-issues').className = "py-3.5 px-3 font-semibold text-sm border-b-2 border-indigo-500 text-indigo-400 transition flex items-center gap-1.5";
+            } else if(tabName === 'support') {
+                document.getElementById('tab-support').classList.remove('hidden');
+                document.getElementById('btn-support').className = "py-3.5 px-3 font-semibold text-sm border-b-2 border-purple-500 text-purple-400 transition flex items-center gap-1.5";
+            } else if(tabName === 'community') {
+                document.getElementById('tab-support-community').classList.remove('hidden');
+                document.getElementById('btn-community').className = "py-3.5 px-3 font-semibold text-sm border-b-2 border-emerald-500 text-emerald-400 transition flex items-center gap-1.5";
+            }
+        }
+
+        // Render Cases
+        function renderCases(data) {
+            const container = document.getElementById('caseList');
+            container.innerHTML = "";
+            if(data.length === 0) {
+                container.innerHTML = `<p class="col-span-2 text-center text-slate-500 py-6 text-sm">검색 결과가 없습니다.</p>`;
+                return;
+            }
+            data.forEach(item => {
+                container.innerHTML += `
+                    <div class="glass-card p-4 rounded-2xl space-y-2 hover:border-indigo-500/40 transition">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-slate-100 text-base">${item.name}</h4>
+                            <span class="text-xs bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded-md font-medium">유형 파악</span>
+                        </div>
+                        <p class="text-xs text-slate-400">📌 발생 장소: ${item.address}</p>
+                        <p class="text-xs text-indigo-300 font-medium">⚠️ 특징: ${item.tag}</p>
+                        <p class="text-xs text-slate-400">💡 권장 솔루션: ${item.menu}</p>
+                    </div>
+                `;
+            });
+        }
+
+        function searchCases() {
+            const keyword = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = cases.filter(c => c.name.toLowerCase().includes(keyword) || c.tag.toLowerCase().includes(keyword) || c.address.toLowerCase().includes(keyword));
+            renderCases(filtered);
+        }
+
+        // Render Support Services
+        function renderSupports(data) {
+            const container = document.getElementById('supportList');
+            container.innerHTML = "";
+            data.forEach(s => {
+                container.innerHTML += `
+                    <div class="glass-card p-4 rounded-2xl space-y-2 border-l-4 border-l-purple-500">
+                        <h4 class="font-bold text-slate-100 text-base">${s.title}</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">${s.desc}</p>
+                        <p class="text-xs text-purple-300 font-semibold mt-2">지원 대상: ${s.target}</p>
+                    </div>
+                `;
+            });
+        }
+
+        function filterSupport() {
+            const cat = document.getElementById('supportCategory').value;
+            if(cat === 'all') {
+                renderSupports(supports);
+            } else {
+                renderSupports(supports.filter(s => s.category === cat));
+            }
+        }
+
+        // Render Messages
+        function renderMessages() {
+            const container = document.getElementById('messageList');
+            container.innerHTML = "";
+            messages.forEach(m => {
+                container.innerHTML += `
+                    <div class="glass-card p-4 rounded-2xl space-y-1.5 border-l-4 border-l-emerald-500">
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-xs text-emerald-400">${m.writer}</span>
+                        </div>
+                        <p class="text-sm text-slate-200 leading-relaxed">${m.content}</p>
+                    </div>
+                `;
+            });
+        }
+
+        function addMessage() {
+            const writerInput = document.getElementById('writerName');
+            const contentInput = document.getElementById('messageContent');
+            
+            if(!contentInput.value.trim()) {
+                showModal("입력 오류", "응원의 메시지 내용을 입력해주세요.", "⚠️");
+                return;
+            }
+
+            messages.unshift({
+                writer: writerInput.value.trim() || "익명 수호자",
+                content: contentInput.value.trim()
+            });
+
+            writerInput.value = "";
+            contentInput.value = "";
+            renderMessages();
+            showModal("등록 완료", "따뜻한 포용의 메시지가 안전하게 전달되었습니다!", "🎉");
+        }
+
+        // Custom Modal Control
+        function showModal(title, desc, icon) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalIcon').innerText = icon;
+            document.getElementById('customModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('customModal').classList.add('hidden');
+        }
+
+        // Initial Load
+        window.onload = function() {
+            renderCases(cases);
+            renderSupports(supports);
+            renderMessages();
+        };
+    </script>
+</body>
+</html>
